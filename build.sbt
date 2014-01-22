@@ -22,7 +22,7 @@ resolvers += "Concurrent Maven Repo" at "http://conjars.org/repo"
 
 
 
-libraryDependencies += "com.twitter" %% "scalding-core" % "0.9.0rc4"
+libraryDependencies += "com.twitter" %% "scalding-core" % "0.8.11"
 
 libraryDependencies += "org.apache.hadoop" % "hadoop-core" % "0.20.2"
 
