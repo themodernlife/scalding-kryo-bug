@@ -41,7 +41,7 @@ As expected, it can find everything it needs on the classpath: scalding and depe
 Curiously, though, the word count job *fails*!  It seems to be because the anonymous functions are not being found inside of Hadoop's classloader??
 
 ```bash
-HADOOP_CLASSPATH=$PWD/deps/scalding-and-deps.jar hadoop jar target/scala-2.10/scalding-example_2.10-0.1-SNAPSHOT.jar example.CopyJobRunner --hdfs --input src/test/resources/alice.txt --output target/word-count
+HADOOP_CLASSPATH=$PWD/deps/scalding-and-deps.jar hadoop jar target/scala-2.10/scalding-example_2.10-0.1-SNAPSHOT.jar example.WordCountJobRunner --hdfs --input src/test/resources/alice.txt --output target/word-count
 ...
 java.lang.Exception: java.lang.RuntimeException: Error in configuring object
 	at org.apache.hadoop.mapred.LocalJobRunner$Job.run(LocalJobRunner.java:354)

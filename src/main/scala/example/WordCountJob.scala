@@ -16,6 +16,10 @@ class WordCountJob(args : Args) extends Job(args) {
     // Lowercase each word and remove punctuation.
     text.toLowerCase.replaceAll("[^a-zA-Z0-9\\s]", "").split("\\s+").filter(_ != "")
   }
+
+  override def config: Map[AnyRef, AnyRef] = {
+    super.config ++ Map("cascading.app.appjar.class" -> classOf[WordCountJob])
+  }
 }
 
 object WordCountJobRunner {
